@@ -1,0 +1,209 @@
+
+    /**
+    * Import Mixins to provide modules with exports.
+    * List other required modules here.
+    */
+
+    @import "mixins";
+
+    /*------------------------------------*\
+
+    /**
+    * Variables
+    */
+
+    $font-family-base: 'serif' !default;
+    $paragraph-text-rendering: optimizeLegibility !default;
+    $hr-border-width: 1px !default;
+    $hr-border-style: solid !default;
+    $hr-border-color: #ddd !default;
+    $hr-margin: rem-calc(20) !default;
+
+    /*------------------------------------*\
+
+    /**
+    * @title Type
+    */
+
+
+    /**
+    *   All Logic pertaining to the top back horizontal navigation
+    *   should go in this file.
+    */
+
+    /*------------------------------------*\
+
+    */
+
+//    @include exports("typography") {
+
+
+    html, body {
+        font-size: 100%;
+        line-height:1.4;
+        text-align:center;
+        color:$black;
+    }
+
+    body {
+        font-family: $font-family-base;
+    }
+
+    // Text alignment class names
+    $align-class-names:
+        small-only,
+        small,
+        medium-only,
+        medium,
+        large-only,
+        large,
+        xlarge-only,
+        xlarge,
+        xxlarge-only,
+        xxlarge;
+
+
+
+    // Generates text align and justify classes
+    @mixin align-classes{
+        .text-left    { text-align: left !important; }
+        .text-right   { text-align: right !important; }
+        .text-center  { text-align: center !important; }
+        .text-justify { text-align: justify !important; }
+
+      	@for $i from 1 through length($align-class-names) {
+    	    @include breakpoint(#{(nth($align-class-names, $i))}) {
+    	        .#{(nth($align-class-names, $i))}-text-left { text-align: left !important; }
+    	        .#{(nth($align-class-names, $i))}-text-right   { text-align: right !important; }
+    	        .#{(nth($align-class-names, $i))}-text-center  { text-align: center !important; }
+    	        .#{(nth($align-class-names, $i))}-text-justify { text-align: justify !important; }
+    	    }
+      	}
+    }
+
+
+
+
+    @include align-classes;
+
+    /* Typography resets */
+    div,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    pre,
+    form,
+    p,
+    blockquote,
+    th,
+    td,
+    button,
+    a {
+        margin:0;
+        padding:0;
+        -webkit-font-smoothing: antialiased;
+
+    }
+
+
+    // These will throw a deprecation warning if used within a media query.
+    @mixin lead {
+        font-size: $p-lead-font-size;
+    }
+
+        /* Default paragraph styles */
+        p {
+            font-family: $font-family-base;
+            line-height: 1.6;
+            margin-bottom: $base-spacing-unit;
+            text-rendering: $paragraph-text-rendering;
+            font-size: $p;
+         	&.lead { @include lead; }
+        }
+
+        hr {
+        	border: $hr-border-style $hr-border-color;
+    		border-width: $hr-border-width 0 0;
+    		clear: both;
+    		margin: $hr-margin 0 ($hr-margin - rem-calc($hr-border-width));
+    		height: 0;
+        }
+
+        /* Helpful Typography Defaults */
+        em,
+        i {
+    		font-style: normal;
+        }
+
+        strong,
+        b,
+        .strong {
+    		font-weight: $font-weight-bold;
+    		line-height: inherit;
+        }
+
+        /* Helper Classes */
+        .upcase {
+            text-transform:uppercase;
+        }
+
+        .titcase {
+            text-transform:capitalize;
+        }
+
+        .locase {
+            text-transform:lowercase;
+        }
+
+        .micro {
+            font-size:$micro;
+            letter-spacing:rem-calc(1);
+        }
+
+        .milli {
+            font-size:$milli;
+            letter-spacing:rem-calc(1);
+        }
+
+
+
+        .block-level {
+            display:block;
+        }
+
+        .address {
+            .name {
+                display:block;
+            }
+            a {
+                display: block;
+            }
+        }
+
+        /* Accessibility */
+        .screen-text {
+            @include element-invisible();
+        }
+
+        .meta {
+            letter-spacing:rem-calc(1);
+            font-size:.7rem;
+        }
+
+        .meta__label {
+            letter-spacing:rem-calc(1);
+            font-size:.6rem;;
+            text-transform:uppercase;
+        }
+
+
+//    }

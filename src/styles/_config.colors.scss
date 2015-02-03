@@ -1,0 +1,69 @@
+
+/*------------------------------------*\
+    $Colors
+
+
+
+    /**
+     * Add Base Colors
+     */
+
+    $white: #ffffff;
+    $black:#000;
+    $yellow : #fff6de;
+    $blue : #d4f2f3;
+    $pink : #ffeadc;
+    $green : #F8FFF4;
+
+
+    /**
+     * Add Social Media Colors
+     */
+
+    $twitter: #b8dff3 !default;
+    $tumblr: #52718c !default;
+    $pinterest: #ee4d40 !default;
+    $facebook: #01254c !default;
+
+    /**
+     * Add Color Maps for themeing
+     */
+
+    $color-accent       :      $yellow;
+    $color-text-body    :      $black;
+
+    $color-anchor-hover :      darken($blue, 40%); 
+
+
+
+    $site-background: $black;
+
+    /**
+    * We have a mixin to generate our background and border colors.
+    */
+
+    @mixin color-setup($colorname: "black", $color: $black) {
+        /**
+       * Background
+       */
+       .background--#{$colorname}        { background: #{$color} !important  }
+
+
+        /**
+       * Borders
+       */
+       .border--#{$colorname}       { border-color:#{$color}  }
+       .border-right--#{$colorname}       { border-right:1px solid #{$color}  }
+       .border-left--#{$colorname}       { border-left:1px solid #{$color}  }
+       .border-top--#{$colorname}       { border-top:1px solid #{$color}  }
+       .border-bottom--#{$colorname}       { border-bottom:1px solid #{$color}  }
+
+
+        /**
+       * Color
+       */
+       .color--#{$colorname}       { color:#{$color}  }
+
+    }
+
+    @include color-setup('white', $white);

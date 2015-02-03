@@ -1,0 +1,14 @@
+@import 'posts.sliders';
+@import 'posts.single';
+@import 'posts.feed';
+@import 'posts.counter';
+
+.fill {
+    position:absolute;
+    width:auto;
+    height:auto;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}

@@ -1,0 +1,156 @@
+
+    /**
+    * Import Mixins to provide modules with exports.
+    * List other required modules here.
+    */
+
+    @import "mixins";
+
+    /*------------------------------------*\
+
+    /**
+    * Variables
+    */
+
+    $font-family-heading: 'sans-serif' !default;
+
+    /*------------------------------------*\
+
+    /**
+    * @title Headings
+    */
+
+
+    /**
+    *   All Logic pertaining to the top back horizontal navigation
+    *   should go in this file.
+    */
+
+    /*------------------------------------*\
+
+    $Helpers Area
+
+    */
+
+
+
+
+    /**
+     * Reusible placeholder classes for headings and weights
+     */
+
+    @mixin subheader {
+        color:$white;
+        display:block;
+    }
+
+    //Type Sizes
+
+    h1 { font-size: $h1-font-size - rem-calc(45); }
+    h2 { font-size: $h2-font-size - rem-calc(6); }
+    h3 { font-size: $h3-font-size - rem-calc(5); }
+    h4 { font-size: $h4-font-size  }
+    h5 { font-size: $h5-font-size; }
+    h6 { font-size: $h6-font-size; }
+
+    @include breakpoint('medium') {
+        h1,h2,h3,h4,h5,h6 { line-height: $header-line-height; }
+        h1 { font-size: $h1-font-size; }
+        h2 { font-size: $h2-font-size; }
+        h3 { font-size: $h3-font-size; }
+    }
+
+
+    /* Default header styles */
+    h1, h2, h3 {
+        font-family: $font-family-heading;
+        font-weight: $font-weight-normal;
+        text-rendering: optimizeLegibility;
+    }
+
+    .with-divide {
+        position:relative;
+        &:after {
+            height:rem-calc(1);
+            width:$base-spacing-unit;
+            transform:translate(0%, 0);
+            background:$blue;
+            content:'';
+            top:100%;
+            left:0;
+            position:absolute;
+        }
+    }
+
+
+    .heading-block {
+        position:relative;
+        padding-left:$base-spacing-unit;
+        padding-right:$base-spacing-unit * 3;
+        margin-left:-$base-spacing-unit;
+        max-width:rem-calc(500px);
+        @include breakpoint('medium') {
+            left:50%;
+            width:50%;
+        }
+    }
+
+
+    h4 {
+        font-weight:$font-weight-normal;
+    }
+
+
+    h5 {
+        font-weight:$font-weight-normal;
+    }
+
+    h6 {
+        font-weight:$font-weight-medium;
+        @extend .with-underline;
+    }
+    .subheader { @include subheader; }
+
+    /* Helpers to extend the styles with out the dependance on heirachy */
+
+    .giga {
+        font-size:$giga - rem-calc(40);
+    }
+
+    .alpha {
+       @extend h1;
+    }
+
+    .beta {
+        @extend h2;
+    }
+
+    .gamma {
+        @extend h3;
+    }
+
+    .delta {
+        @extend h4;
+    }
+
+    .epsilon {
+        @extend h5;
+    }
+
+    .zeta {
+        @extend h6;
+
+    }
+
+    .text--with-icon {
+        .text--with-icon__icon {
+            position:absolute;
+            svg {
+                width:rem-calc(50);
+            }
+        }
+        .text--with-icon__text {
+            display:inline-block;
+            padding:0 rem-calc(60);
+        }
+    }

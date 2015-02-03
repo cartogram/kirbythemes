@@ -26,3 +26,14 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+
+.DS_Store
+/site/accounts
+/assets/avatars
+/thumbs/*
+bower_components
+dist
+.tmp
+.sass-cache
+

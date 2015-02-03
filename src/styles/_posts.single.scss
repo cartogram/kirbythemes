@@ -1,0 +1,97 @@
+.posts-single {
+    z-index:index($single_elements, single-content);
+    position:fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    width:auto;
+    height:auto;
+    overflow:scroll;
+    background:$white;
+}
+
+.posts-single__content {
+    top:100vh;
+    position:relative;
+    padding:0 $base-spacing-unit * 2 $base-spacing-unit * 2;
+    text-align:left;
+}
+
+
+
+.post-mast__meta {
+    height:$base-spacing-unit * 2;
+    line-height:$base-spacing-unit * 2;
+    bottom:$base-spacing-unit * 0;
+    left:$base-spacing-unit * 2;
+    right: $base-spacing-unit * 2;
+    position:absolute;
+    width:auto;
+    @include breakpoint('medium') {
+        right:0;
+    }
+    &.on-right {
+        left:0;
+        right:0;
+        @include breakpoint('medium') {
+            right:$base-spacing-unit * 2;
+        }
+    }
+}
+
+.nav--next-prev {
+    margin-top:$base-spacing-unit * 2;
+    overflow:hidden;
+    background:rgba($yellow, 0.05);
+    > a {
+        display:block;
+        padding:$base-spacing-unit;
+        background:$green;
+        position:relative;
+        height:50vh;
+
+        &:hover .next-prev__image {
+            opacity:.7;
+        }
+
+        @include breakpoint('medium') {
+            height:100vh;
+            width:50%;
+            float:left;
+        }
+    }
+
+    .next-prev--next {
+        background:$blue;
+        @include breakpoint('medium') {
+            float:right;
+        }
+    }
+
+
+    .next-prev__image {
+        position:absolute;
+        bottom:0;
+        left:0;
+        top:0;
+        right:0;
+        height:auto;
+        width:auto;
+        background-position:50% 50%;
+        background-size:cover;
+        background-repeat:no-repeat;
+        transition:opacity $base-timing $base-easing;
+        opacity:0;
+    }
+
+    .next-prev__text {
+        position:absolute;
+        z-index:1;
+        top:50%;
+        transform:translate(0, -50%);
+        left:0;
+        right:0;
+        padding:$base-spacing-unit;
+    }
+}

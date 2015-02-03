@@ -1,0 +1,234 @@
+
+    /**
+    * Import Mixins to provide modules with exports.
+    * List other required modules here.
+    */
+
+    @import "mixins";
+
+    /*------------------------------------*\
+
+    /**
+    * Variables
+    */
+
+
+    /*------------------------------------*\
+
+    /**
+    * @title Links
+    */
+
+
+    /**
+    *   All Logic pertaining to the top back horizontal navigation
+    *   should go in this file.
+    */
+
+    /*------------------------------------*\
+
+    */
+
+    //@include exports("links") {
+
+    /**
+    * @name A
+    * @description Default Link Styles
+    * @state :hover,&:focus - hover,& focus state
+    * @markup
+    *   <a>Markup</a>
+    */
+
+    a {
+        line-height: inherit;
+        transition:color $base-timing $base-easing, background $base-timing $base-easing;;
+        cursor:pointer;
+        color:$black;
+        text-decoration:none;
+        img {
+            border:none;
+        }
+        &.active {
+            color:green !important;
+        }
+    }
+
+    li a,
+    p a {
+        &:hover {
+            color:$color-anchor-hover;
+        }
+    }
+
+    .link--with-image {
+        border:none;
+    }
+
+    .link--primary {
+        display:inline;
+        position:relative;
+        &:after,
+        &:before {
+            content:'';
+            left:0;
+            right:0;
+            bottom:-$base-spacing-unit/4;
+            width:auto;
+            height:1px;
+            background:$black;
+            position:absolute;
+            transition:all $base-timing $base-easing;
+            transform-origin:50% 50%;
+        }
+        &:after {
+            background:$color-anchor-hover;
+            transform:scaleX(0);
+        }
+        &:hover {
+            color:$color-anchor-hover;
+
+            &:after {
+                transform:scaleX(1);
+            }
+        }
+    }
+
+
+    .link--disabled {
+
+    }
+
+
+
+    .link--view {
+        position:absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        height:100%;
+        width:50%;
+        line-height:$base-spacing-unit * 2;
+
+        .link--view__trigger {
+            position:absolute;
+            transform-origin: 0% 0%;;
+            transform:rotate(-90deg) translate(135%,200%);
+            right: 0;
+            top:50%;
+            transition:transform $base-timing * 3 $base-timing * 3 $base-easing;
+            z-index:1;
+            opacity:0;
+            display:none;
+            .swiper-slide-active & {
+                opacity:1;
+                transform:rotate(-90deg) translate(135%,0%);
+            }
+            .icon {
+                display:block;
+                transform-origin: 100% 0%;
+                transform: rotate(90deg)
+            }
+        }
+        &:hover {
+            .link--view__trigger {
+                opacity:1;
+            }
+        }
+    }
+
+
+    .link--view-filters {
+        display:block;
+        padding:$base-spacing-unit * 5 0 $base-spacing-unit * 3 $base-spacing-unit * 2;
+    }
+
+
+    .link--filter-toggle-on {
+        z-index:index($elements, filter-toggle-on);
+        transition:transform $base-timing $base-easing;
+        &.ng-hide-add {
+            transform:translate(0%, 0);
+        }
+
+        &.ng-hide-add.ng-hide-add-active {
+            transform:translate(100%, 0);
+        }
+
+        &.ng-hide-remove {
+            transform:translate(0%, 0);
+        }
+
+        &.ng-hide-remove.ng-hide-remove-active {
+            transform:translate(100%, 0);
+        }
+
+        .filters-is-visible & {
+
+        }
+    }
+
+    .link--filter-toggle-off {
+        z-index:index($elements, filter-toggle-off);
+        transition:transform $base-timing $base-easing;
+        &.ng-hide-add {
+            transform:translate(0%, 0);
+        }
+
+        &.ng-hide-add.ng-hide-add-active {
+            transform:translate(-100%, 0);
+        }
+
+        &.ng-hide-remove {
+            transform:translate(0%, 0);
+        }
+
+        &.ng-hide-remove.ng-hide-remove-active {
+            transform:translate(-100%, 0);
+        }
+
+        .filters-is-visible & {
+
+        }
+    }
+
+
+    .link--block {
+        height:$base-spacing-unit*2;
+        line-height:$base-spacing-unit *2;
+        width:$base-spacing-unit*2;
+        text-align:center;
+    }
+
+    .link--view-single {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .link--to-top {
+        position:fixed;
+        bottom:0;
+        right:0;
+        z-index:index($elements,to-top);
+    }
+
+    .link--swipe-next,
+    .link--swipe-prev {
+        position:absolute;
+        bottom:0;
+        right:0;
+        left:auto;
+    }
+
+    .link--swipe-prev {
+        left:0;
+        right:auto;
+    }
+
+
+
+
+
+
+    //}

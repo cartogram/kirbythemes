@@ -1,0 +1,52 @@
+*,
+*:before,
+*:after {
+    box-sizing:border-box;
+}
+
+.svg-defs {
+    display:none;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+display: none !important;
+}
+
+.wrap {
+    overflow: hidden;
+    transform:translate3d(0, 0px, 0);
+}
+
+
+/* Content animations */
+.is-loaded .wrap {
+    animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+}
+
+
+@keyframes animLoadedContent {
+    from {
+        opacity: 0;
+    }
+}
+
+.loader--view {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height:auto;
+    width:auto;
+    background:$blue;
+    transition:all $base-timing $base-easing;
+    opacity:0;
+    &.ng-hide-add {
+        opacity:1;
+    }
+    &.ng-hide-remove {
+        opacity:0;
+    }
+    display:none!important;
+    opacity:0;
+}

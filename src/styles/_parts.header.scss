@@ -1,0 +1,96 @@
+
+    /**
+    * Import Mixins to provide modules with exports.
+    * List other required modules here.
+    */
+
+    @import "mixins";
+
+    /*------------------------------------*\
+
+    /**
+    * Variables
+    */
+
+
+    /*------------------------------------*\
+
+    /**
+    * @title Sections
+    */
+
+
+    /**
+    *   All Logic pertaining to the top back horizontal navigation
+    *   should go in this file.
+    */
+
+    /*------------------------------------*\
+
+    $Sections Area
+
+    */
+
+
+
+    /*
+    *   State has not bootstrapped
+    */
+    .header {
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        height:$base-spacing-unit * 2;
+        line-height:$base-spacing-unit * 2;
+        z-index: index($elements, header);
+        overflow:hidden;
+    }
+
+    .loader {
+        display:block;
+        clear:both;
+        transition:transform $base-timing $base-easing;
+        transform:translate3d(0, -100%, 0);
+    }
+
+    .header__logo {
+        width:50%;
+        float:left;
+        transition:transform $base-timing $base-easing;
+        transform:translate3d(0, -100%, 0);
+
+    }
+
+    .header__nav {
+        width:50%;
+        float:right;
+        transition:transform $base-timing $base-easing;
+        transform:translate3d(0, -100%, 0);
+    }
+
+
+    /*
+    *   State is bootstrapped and is loading
+    */
+    .is-loading.is-ready {
+        .header {
+
+        }
+
+    }
+
+    /*
+    *   State is bootstrapped and is loading
+    */
+    .is-loaded.is-ready {
+        .header__logo {
+            transform:translate3d(0, 0%, 0);
+        }
+        .header__nav {
+            transform:translate3d(0, 0%, 0);
+        }
+        .loader {
+            transform:translate3d(0, 0%, 0);
+        }
+    }

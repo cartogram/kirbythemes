@@ -1,0 +1,72 @@
+
+    /**
+    * Import Mixins to provide modules with exports.
+    * List other required modules here.
+    */
+
+    @import "mixins";
+
+    /*------------------------------------*\
+
+    /**
+    * Variables
+    */
+
+
+    /*------------------------------------*\
+
+    /**
+    * @title Sections
+    */
+
+
+    /**
+    *   All Logic pertaining to the top back horizontal navigation
+    *   should go in this file.
+    */
+
+    /*------------------------------------*\
+
+    $Sections Area
+
+    */
+
+    //@include exports("footer") {
+
+        .footer{
+            position:fixed;
+            bottom:0;
+            right:0;
+            left:0;
+            height:$base-spacing-unit * 2;
+            line-height:$base-spacing-unit * 2;
+            z-index:index($elements, footer);
+
+
+            p {
+                margin-bottom:0;
+                line-height:$base-spacing-unit * 2;
+            }
+
+            .footer__right,
+            .footer__left {
+                position:absolute;
+                width:auto;
+                top:0;
+                bottom:0;
+                height:auto;
+                width:auto;
+            }
+
+            .footer__right {
+                left:50%;
+                right:0%;
+            }
+            .footer__left {
+                right:50%;
+                left:0%;
+            }
+
+        }
+
+    //}

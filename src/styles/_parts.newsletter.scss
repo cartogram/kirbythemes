@@ -1,0 +1,42 @@
+
+    /**
+    * Import Mixins to provide modules with exports.
+    * List other required modules here.
+    */
+
+    @import "mixins";
+
+    /*------------------------------------*\
+
+    /**
+    * Variables
+    */
+
+    $header__height--mobile:rem-calc(50) !default;
+    $header__height:rem-calc(80) !default;
+    $push-nav__width:rem-calc(260) !default;
+
+
+    /*------------------------------------*\
+
+    /**
+    * @title Sections
+    */
+
+
+    /**
+    *   All Logic pertaining to the top back horizontal navigation
+    *   should go in this file.
+    */
+
+    /*------------------------------------*\
+
+    $Sections Area
+
+    */
+
+
+    .newsletter {
+        background:$pink;
+        padding:0 $base-spacing-unit 0;
+    }

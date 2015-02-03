@@ -1,0 +1,78 @@
+.input {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    overflow:hidden;
+    height:$base-spacing-unit * 2;
+    line-height:$base-spacing-unit * 2;
+    width:50%;
+    display:none !important;
+    @include breakpoint('medium') {
+        display:inline-block !important;
+    }
+}
+
+.form {
+    display:block;
+    height:$base-spacing-unit * 2 * 2;
+
+}
+
+.input__field {
+    background:none;
+    position: absolute;
+    top:0;
+    display: block;
+    border: none;
+    border-radius: 0;
+    -webkit-appearance: none; /* for box shadows to show on iOS */
+    height:$base-spacing-unit * 2;
+    line-height:$base-spacing-unit * 2;
+    transition:transform $base-timing $base-easing;
+    transform:translate3d(0%, -100%, 0) ;
+    width:100%;
+    &:focus,
+    &.input--filled {
+        outline: none;
+        transform:translate3d(0, 0, 0);
+    }
+
+}
+
+
+.input  .input__label {
+    position:absolute;
+    top:0;
+    left:$base-spacing-unit;
+    display: inline;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition:transform $base-timing $base-easing;
+    transform:translate3d(0%, 0, 0);
+    cursor:pointer;
+}
+
+    .input__field:focus + .input__label,
+    .input__field.input--filled + .input__label {
+        transform:translate3d(0, 100%, 0);
+    }
+
+.input .input__btn {
+    position: absolute;
+    display: block;
+    width: 30%;
+    top:0;
+    right:0;
+    transform:translate3d(0, -100%, 0);
+    height:$base-spacing-unit * 2;
+    line-height:$base-spacing-unit * 2;
+}
+
+    .input__field:focus + .input__label  + .input__btn,
+    .input__field.input--filled + .input__label  + .input__btn {
+        transform:translate3d(0, 0%, 0);
+    }

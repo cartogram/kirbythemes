@@ -1,0 +1,115 @@
+// /*
+// Transition To Single
+// */
+//
+//
+// .posts-texts-wrapper {
+//     position:relative;
+// }
+//
+// .state--transition-to-single {
+//
+//     @include breakpoint(medium-up) {
+//         .post-text__mast.on-left:after {
+//             width:200%;
+//
+//         }
+//     }
+//
+//     .posts-texts-wrapper {
+//         top:100vh;
+//         position:relative;
+//     }
+//
+//
+// }
+// /*
+// Transition To Single
+// */
+// .state--transition-on-single {
+//     @include breakpoint(medium-up) {
+//         .post-text__mast.on-left:after {
+//             background:rgba($green, 0.9);
+//             width:200%;
+//         }
+//     }
+// }
+
+.view-animate {
+    /* Class applied when when page fades away. */
+    transition: opacity $base-timing $base-easing;
+    &.ng-leave{
+        // opacity:1;
+        &.ng-leave-active {
+            opacity:0;
+        }
+    }
+
+    &.ng-enter {
+        opacity:0;
+        &.ng-enter-active {
+            opacity:1;
+        }
+    }
+
+    // &.feed {
+    //     opacity:1;
+    //     transition: all $base-timing  $base-easing;
+    //     &.ng-enter {
+    //         transform:translate3d(100%,0,0);
+    //         &.ng-enter-active {
+    //             transform:translate3d(0%,0,0);
+    //         }
+    //     }
+    //     &.ng-leave{
+    //         transform:translate3d(0%,0,0);
+    //         &.ng-leave-active {
+    //             transform:translate3d(100%,0,0);
+    //             opacity:1;
+    //         }
+    //     }
+    // }
+
+}
+
+
+
+
+// .posts-texts-wrapper {
+//     position:relative;
+// }
+//
+// .state--transition-to-single {
+//
+//     @include breakpoint(medium-up) {
+//         .post-text__mast.on-left:after {
+//             width:200%;
+//
+//         }
+//
+//         .posts-texts-wrapper {
+//             top:100vh;
+//             position:relative;
+//         }
+//     }
+//
+//
+//
+//
+// }
+// /*
+// Transition To Single
+// */
+// .state--transition-on-single {
+//     @include breakpoint(medium-up) {
+//         .post-text__mast.on-left:after {
+//             background:rgba($green, 0.9);
+//             width:200%;
+//         }
+//
+//         .posts-texts-wrapper {
+//             top:0;
+//         }
+//
+//     }
+// }
