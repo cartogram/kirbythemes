@@ -4,6 +4,8 @@ var gulp = require('gulp');
 
 var argv = require('yargs').argv;
 
+var gutil = require('gulp-util');
+
 var $ = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license', 'del']
 });

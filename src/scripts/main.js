@@ -343,7 +343,7 @@
 
                 var request = $http({
                     method: 'get',
-                    url: 'api/projects'
+                    url: 'api/'
                 });
 
                 return( request.then( handleSuccess, handleError ) );

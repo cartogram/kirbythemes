@@ -1,27 +1,19 @@
-Title: Lauren Wickware Design
+Title: Kirby Themes
 ----
 
-Description: This is Kirby's Starterkit.
-
-----
-
-Keywords: Design, Toronto
+Description: Premium themes for kirby CMS
 
 ----
 
-twitter: laurenwickware
+Keywords: Design, Development, Toronto, Themes, CMS, Kirby
 
 ----
 
-fontStackOne: 'Karla',  'Inconsolata'
+twitter: kirby_themes
 
 ----
 
-fontStackTwo: 'Karla',  'Inconsolata'
-
-----
-
-fontStackThree: 'Karla',  'Inconsolata'
+fontStack: 'Karla',  'Inconsolata'
 
 ----
 
@@ -29,8 +21,4 @@ Copyright: © 2009-(date: Year) (link: http://getkirby.com text: Kirby)
 
 ----
 
-About: Lauren Wickware is an award-winning independent designer working in downtown Toronto. She implements the persuasive power of good design to deliver sophisticated, meaningful results to a roster of clients that range from individual artists to internationally recognized corporations.
-
-Lauren brings to her practice many years of experience working in design studios, publishing, and museum environments in New York City and Toronto. She holds degrees from OCAD University and Parsons The New School for Design. Currently, Lauren is an instructor of Advanced Typography at OCAD and a faculty member at the Post-graduate Institute without Boundaries program at George Brown College’s School of Design.
-
-Outside the studio, Lauren collaborates with a group of multi-disciplined designers on site-specific projects around the GTA.
+About: Kirby Themes is a premium theme distributor for kirby CMS

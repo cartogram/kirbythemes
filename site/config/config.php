@@ -32,11 +32,11 @@ c::set('debug', true);
 
 c::set('routes', array(
     array(
-        'pattern' => 'api/(:any?)',
-        'action'  => function($type_uid) {
+        'pattern' => 'api',
+        'action'  => function() {
             header('Content-type: application/json; charset=utf-8');
-            $per_page = 15;
-            $page = site()->children()->find('projects', 'news');
+            $per_page = 100;
+            $page = site()->children();
             $data = $page->children()->visible()->flip()->paginate($per_page);
 
             $count = 0;
