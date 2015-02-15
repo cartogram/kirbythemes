@@ -1,7 +1,7 @@
 <?php
 
 $families = array(
-    array($site->fontStack())
+    array($site->Fonts())
 );
 
 $family = array_rand($families); //here yoy get random first of array(green or red or yellow)

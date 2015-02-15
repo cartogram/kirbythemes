@@ -1,0 +1,3 @@
+[submodule "demos/ferris"]
+	path = demos/ferris
+	url = git@github.com:studio-cartogram/ferris.git

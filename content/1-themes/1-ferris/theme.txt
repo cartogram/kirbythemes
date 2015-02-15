@@ -1,0 +1,15 @@
+Title: Ferris
+
+----
+
+Text: Deliberately minimal. Deceptively powerful.
+Ferris is the first premium theme
+for the Kirby CMS.
+
+----
+
+Buy: http://gumroad.com
+
+----
+
+Demo: http://kirbythemes.com/demos/ferris

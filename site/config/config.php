@@ -65,7 +65,8 @@ c::set('routes', array(
                     $images[] = array(
                         'url'    => $image->url(),
                         'width'  => $image->width(),
-                        'height' => $image->height()
+                        'height' => $image->height(),
+                        'name'   => str_replace(' ', '_', $image->name())
                     );
                 }
 
@@ -123,6 +124,8 @@ c::set('routes', array(
                     'number'  => (string)$post->number(),
                     'subtitle'  => (string)$post->subtitle(),
                     'company'  => (string)$post->company(),
+                    'color' => (string)$post->color(),
+
                     'website'  => (string)$post->website(),
                     'text'  => (string)$post->text()->kirbytext(),
                     'summary'  => (string)$post->summary()->kirbytext(),

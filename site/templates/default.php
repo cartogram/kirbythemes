@@ -2,17 +2,27 @@
 
 snippet('head');
 
-snippet('header');
-
 snippet('svg-symbols');
 
-//snippet('navigation');
+echo '<div kt-set-background class="main">';
 
-    echo '<div ng-view></div>';
+snippet('header');
 
-snippet('main');
+echo '<section id="intro" class="section">';
+
+    echo '<h1>' . $site->description()->html() . '</h1>';
+
+echo '</section>';
+
+foreach($pages->visible() as $section) {
+
+  snippet('part-' . $section->uid(), array('data' => $section));
+
+}
 
 snippet('footer');
+
+echo '</div>';
 
 snippet('foot');
 

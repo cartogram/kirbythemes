@@ -44,19 +44,21 @@
         transition:color $base-timing $base-easing, background $base-timing $base-easing;;
         cursor:pointer;
         color:$black;
-        text-decoration:none;
         img {
             border:none;
         }
         &.active {
-            color:green !important;
+        }
+        &:hover {
+            text-decoration:none;
+
         }
     }
 
     li a,
     p a {
         &:hover {
-            color:$color-anchor-hover;
+
         }
     }
 

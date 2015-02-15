@@ -37,58 +37,35 @@
         list-style:none;
     }
 
-    .list--bulleted {
-        margin-bottom:$base-spacing-unit;
-        li {
-            position:relative;
-            padding:0 0 $base-spacing-unit/2 $base-spacing-unit;
-            font-size:$milli;
-            &:before {
-                content:' ';
-                left:0;
-                top:.45rem;
-                content:'';
-                height:rem-calc(5);
-                width:rem-calc(5);
-                transform:rotate(-45deg);
-                position:absolute;
-            }
-        }
-    }
-
     .list--inline {
         display:block;
-        width:100%;
-        margin-left:-$base-spacing-unit/2;
         li {
             display:inline-block;
             position:relative;
-            margin:0 $base-spacing-unit/2 $base-spacing-unit/4;
-
+            margin:0 ;
+            padding:0 $base-spacing-unit;
             &.is-disabled a {
                 opacity:0;
+            }
+
+            &:before {
+                content:' ';
+                left:0;
+                top:50%;
+                content:'';
+                height:rem-calc(4);
+                width:rem-calc(4);
+                border-radius:50%;
+                transform:translate(-50%);
+                position:absolute;
+                background:$black;
+            }
+            &:first-child:before {
+                display:none;
             }
         }
         a,
         label {
 
         }
-    }
-
-    .nav--global {
-        margin-left:-$base-spacing-unit;
-        li {
-            width:50%;
-            margin:0;
-            padding:0 0 0 $base-spacing-unit;
-        }
-        a,
-        label {
-        //    padding:0 $base-spacing-unit/2;
-        }
-
-        .is-active > a {
-    //        text-decoration:underline;
-        }
-
     }

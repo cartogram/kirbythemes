@@ -34,15 +34,15 @@ echo '<meta name="description" content="' . $site->description()->html() . '">';
 
 echo '<meta name="keywords" content="' . $site->keywords()->html() . '">';
 
+snippet('fonts');
+
 echo css('assets/styles/style.css');
 
 echo js('assets/scripts/modernizr.custom.js');
 
-snippet('fonts');
-
 echo '</head>';
 
-echo '<body ng-app="lw" class="template--{{pagename}} state--{{state}}" ng-class="{
+echo '<body ng-app="kt" class="" ng-class="{
     \'is-ready\' : isReady ,
     \'is-loading\' : isLoading,
     \'is-loaded\' : isLoaded

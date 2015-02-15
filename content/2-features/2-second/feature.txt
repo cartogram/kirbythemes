@@ -1,0 +1,5 @@
+Heading: Made with Love on Kirby CMS
+
+----
+
+Text: Kirby is a file‑based CMS that is inexpensive and easy to setup. All our themes are specifically built to utilize the flexibility and speed that Kirby’s awesomeness makes possible.

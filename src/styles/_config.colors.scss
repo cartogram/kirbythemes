@@ -32,11 +32,11 @@
     $color-accent       :      $yellow;
     $color-text-body    :      $black;
 
-    $color-anchor-hover :      darken($blue, 40%); 
+    $color-anchor-hover :      darken($blue, 40%);
 
 
 
-    $site-background: $black;
+    $color-site-background: #ffa686;
 
     /**
     * We have a mixin to generate our background and border colors.

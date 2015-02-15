@@ -32,7 +32,7 @@
     */
 
     %btn{
-        display:inline;
+        display:inline-block;
         vertical-align:baseline;
         white-space:nowrap;
         font-family:inherit;
@@ -47,7 +47,6 @@
         width:auto;
         text-align:center;
         position:relative;
-
     }
 
     /**
@@ -74,8 +73,12 @@
 
     .btn{
         @extend %btn;
-
-         -webkit-appearance: none;
+        padding-left:$base-spacing-unit * 2;
+        padding-right:$base-spacing-unit * 2;
+        border:2px solid;
+        line-height:3;
+        border-radius:$site-border-radius;
+        -webkit-appearance: none;
         &,
         &:hover{
             text-decoration:none;   /* [9] */
@@ -94,19 +97,10 @@
     }
 
     .btn--secondary {
-        background:$white;
-        color:$black;
-        @include breakpoint('medium') {
-            line-height:5;
-        }
-        &:hover {
-
-        }
-    }
-
-    .btn--tertiary {
 
     }
+
+
 
     /**
     * Button sizes
@@ -122,13 +116,8 @@
     .btn--full {
         width:100%;
         display:block;
-        margin:auto;
         &.with-max {
             max-width:rem-calc(350);
-        }
-        &,
-        &:hover {
-            padding:0;
         }
     }
 

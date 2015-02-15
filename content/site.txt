@@ -1,24 +1,16 @@
 Title: Kirby Themes
 ----
 
-Description: Premium themes for kirby CMS
+Description: Premium Themes for Kirby CMS
 
 ----
 
-Keywords: Design, Development, Toronto, Themes, CMS, Kirby
+Keywords: Design, Toronto
 
 ----
 
-twitter: kirby_themes
+Fonts: 'Montserrat',  'Inconsolata'
 
 ----
 
-fontStack: 'Karla',  'Inconsolata'
-
-----
-
-Copyright: © 2009-(date: Year) (link: http://getkirby.com text: Kirby)
-
-----
-
-About: Kirby Themes is a premium theme distributor for kirby CMS
+Copyright: © (date: Year) (link: # text: Kirby Themes). All Rights Reserved.

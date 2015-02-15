@@ -34,37 +34,10 @@
     //@include exports("footer") {
 
         .footer{
-            position:fixed;
-            bottom:0;
-            right:0;
-            left:0;
-            height:$base-spacing-unit * 2;
-            line-height:$base-spacing-unit * 2;
-            z-index:index($elements, footer);
 
 
             p {
-                margin-bottom:0;
-                line-height:$base-spacing-unit * 2;
-            }
-
-            .footer__right,
-            .footer__left {
-                position:absolute;
-                width:auto;
-                top:0;
-                bottom:0;
-                height:auto;
-                width:auto;
-            }
-
-            .footer__right {
-                left:50%;
-                right:0%;
-            }
-            .footer__left {
-                right:50%;
-                left:0%;
+                font-size:$micro;
             }
 
         }

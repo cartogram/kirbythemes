@@ -32,13 +32,13 @@ $foundation-version: '1.0.2';
 // @import
 //   "components/iconic",
 //   "components/action-sheet",
-//   "components/block-list",
+@import "components/block-list";
 //   "components/button",
 //   "components/button-group",
 //   "components/card",
 //   "components/extras",
 //   "components/forms",
-//   "components/grid",
+@import "components/grid";
 //   "components/title-bar",
 //   "components/label",
 //   "components/list",
@@ -52,7 +52,7 @@ $foundation-version: '1.0.2';
 //   "components/tabs",
 //   "components/accordion",
 //   "components/typography",
-//   "components/utilities";
+@import  "components/utilities";
 
 
 // @import Configuration
@@ -73,10 +73,10 @@ $foundation-version: '1.0.2';
 * Import Common Parts
 */
 @import "parts";
-@import "posts";
-@import "page";
+// @import "posts";
+// @import "page";
 @import "sections";
-@import "transitions";
+// @import "transitions";
 
 /**
 * Import Sections
@@ -85,12 +85,14 @@ $foundation-version: '1.0.2';
 /**
 * Import Components
 */
-@import "forms";
+// @import "forms";
 @import "buttons";
 @import "links";
-@import "images";
-@import "svgs";
-@import "icons";
+// @import "images";
+// @import "svgs";
+// @import "icons";
+
+@import "shame";
 
 /**
 * Import Overrides

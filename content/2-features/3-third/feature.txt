@@ -1,0 +1,6 @@
+Heading: Get set up in no time
+
+----
+
+Text: The installation process could not be simpler. Just drop the files on your server and your done.
+

@@ -37,14 +37,15 @@
     *   State has not bootstrapped
     */
     .header {
-        position:fixed;
-        top:0;
-        left:0;
-        right:0;
-        height:$base-spacing-unit * 2;
-        line-height:$base-spacing-unit * 2;
-        z-index: index($elements, header);
-        overflow:hidden;
+        // position:fixed;
+        // top:0;
+        // left:0;
+        // right:0;
+        // height:$base-spacing-unit * 2;
+        // line-height:$base-spacing-unit * 2;
+        // z-index: index($elements, header);
+        // overflow:hidden;
+        
     }
 
     .loader {
