@@ -89,6 +89,9 @@
         &:focus{
             outline:none;
         }
+        + .btn {
+            margin-left:$base-spacing-unit;
+        }
     }
 
 
@@ -115,9 +118,8 @@
 
     .btn--full {
         width:100%;
-        display:block;
         &.with-max {
-            max-width:rem-calc(350);
+            max-width:rem-calc(150);
         }
     }
 

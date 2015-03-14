@@ -13,3 +13,23 @@ $site-max-width : rem-calc(700) !default;
 .main {
     transition:background $base-timing $base-easing;
 }
+
+
+.intro {
+    position:absolute;
+    right:10%;
+    padding:$base-spacing-unit;
+    max-width:rem-calc(450px);
+    z-index:index($elements, intro);
+    @include breakpoint('medium') {
+        width:70%;
+    }
+    @include breakpoint('large') {
+        width:40%;
+    }
+}
+
+
+.features {
+
+}

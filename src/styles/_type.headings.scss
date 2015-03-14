@@ -46,9 +46,9 @@
 
     //Type Sizes
 
-    h1 { font-size: $h1-font-size - rem-calc(45); }
+    h1 { font-size: $h1-font-size - rem-calc(5); }
     h2 { font-size: $h2-font-size - rem-calc(6); }
-    h3 { font-size: $h3-font-size - rem-calc(5); }
+    h3 { font-size: $h3-font-size; }
     h4 { font-size: $h4-font-size  }
     h5 { font-size: $h5-font-size; }
     h6 { font-size: $h6-font-size; }

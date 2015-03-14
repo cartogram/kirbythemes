@@ -1,6 +1,6 @@
 <?php
 
-echo '<header class="header soft-double" role="banner">';
+echo '<header class="header soft-double--ends" role="banner">';
 
     echo '<a class=" logo " href="#/">';
 

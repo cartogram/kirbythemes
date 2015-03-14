@@ -1,4 +1,4 @@
-Heading: Minimal and Functional Design
+Heading: Minimal and Functional
 
 ----
 

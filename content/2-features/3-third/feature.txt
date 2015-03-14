@@ -1,6 +1,5 @@
-Heading: Get set up in no time
+Heading: Easy Setup
 
 ----
 
-Text: The installation process could not be simpler. Just drop the files on your server and your done.
-
+Text: The installation process could not be simpler. There are no special server configurations, and not even a database is require. Just drop the files on your server and you are good to go.

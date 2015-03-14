@@ -1,18 +1,13 @@
 <?php
 
-echo '<section id="features" class="section grid-block vertical medium-horizontal">';
+echo '<section id="features" class="push-double--ends soft-double--ends features section--full grid-block vertical medium-horizontal">';
 
-        // echo '<div class="content-block small-12">';
-        //
-        //     echo '<h1>' . $data->title()->html() . '</h1>';
-        //
-        //     echo $data->text()->kirbytext();
-        //
-        // echo '</div>';
+        echo '<div class="section grid-block vertical medium-horizontal">';
+
 
     foreach($data->children()->visible() as $feature):
 
-        echo '<div class="content-block small-12 medium-6 ">';
+        echo '<div class="content-block small-12 medium-6 text-left ">';
 
             echo '<div class="soft-double">';
 
@@ -25,6 +20,7 @@ echo '<section id="features" class="section grid-block vertical medium-horizonta
         echo '</div>';
 
     endforeach;
+    echo '</div>';
 
 echo '</section>';
 
